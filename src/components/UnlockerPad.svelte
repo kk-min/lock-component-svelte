@@ -32,7 +32,7 @@
 	}
 
 	.pressed {
-		cursor: not-allowed;
+		cursor: auto;
 		background-color: lightskyblue;
 	}
 
