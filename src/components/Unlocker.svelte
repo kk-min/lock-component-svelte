@@ -2,6 +2,7 @@
 	import UnlockerPad from './UnlockerPad.svelte';
 	import { secret } from '$lib/stores/SecretStore';
 	import { onMount } from 'svelte';
+	import { animationLock } from '$lib/stores/AnimationStore';
 
 	let unlockers: string[] = ['0', '1', '2', '3'];
 	let locked = false;
@@ -18,13 +19,13 @@
 	}
 
 	async function animateSecret() {
-		locked = true;
+		animationLock.set(true);
 		for (let i = 0; i < $secret.length; i++) {
+			await new Promise((resolve) => setTimeout(resolve, 1000));
 			let padId = $secret[i];
 			animate(padId);
-			await new Promise((resolve) => setTimeout(resolve, 1000));
 		}
-		locked = false;
+		animationLock.set(false);
 	}
 
 	onMount(animateSecret);

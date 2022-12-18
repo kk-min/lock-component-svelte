@@ -1,11 +1,16 @@
-<script>
+<script lang="ts">
 	import Lock from '../components/Lock.svelte';
 	import Unlocker from '../components/Unlocker.svelte';
+	import ResetButton from '../components/ResetButton.svelte';
+	export let reset: boolean = false;
 </script>
 
 <div class="container">
-	<Lock />
-	<Unlocker />
+	{#key reset}
+		<Lock />
+		<Unlocker />
+	{/key}
+	<ResetButton bind:resetToggle={reset} />
 </div>
 
 <style>

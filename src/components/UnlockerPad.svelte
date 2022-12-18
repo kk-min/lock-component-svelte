@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { userInput } from '../lib/stores/UserStore';
+	import { animationLock } from '../lib/stores/AnimationStore';
 	export let padId: string;
-	export let locked: boolean = false;
 	let pressed: boolean = false;
 	function onClick(value: String) {
-		if (locked || pressed) {
+		if (animationLock || pressed) {
 			return;
 		}
 		pressed = true;
@@ -13,8 +13,13 @@
 	}
 </script>
 
-<button id={padId} class="unlocker" class:pressed on:click={() => onClick(padId)} disabled={locked}
-	>{padId}</button
+<button
+	id={padId}
+	class="unlocker"
+	class:pressed
+	class:locked={animationLock}
+	on:click={() => onClick(padId)}
+	disabled={animationLock || pressed}>{padId}</button
 >
 
 <style>
