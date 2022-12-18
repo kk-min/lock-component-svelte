@@ -4,7 +4,7 @@
 	export let padId: string;
 	let pressed: boolean = false;
 	function onClick(value: String) {
-		if (animationLock || pressed) {
+		if ($animationLock || pressed) {
 			return;
 		}
 		pressed = true;
@@ -17,9 +17,9 @@
 	id={padId}
 	class="unlocker"
 	class:pressed
-	class:locked={animationLock}
+	class:locked={$animationLock}
 	on:click={() => onClick(padId)}
-	disabled={animationLock || pressed}>{padId}</button
+	disabled={$animationLock || pressed}>{padId}</button
 >
 
 <style>
