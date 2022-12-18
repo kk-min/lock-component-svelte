@@ -30,4 +30,8 @@
 		cursor: not-allowed;
 		background-color: lightskyblue;
 	}
+
+	.locked {
+		cursor: not-allowed;
+	}
 </style>
