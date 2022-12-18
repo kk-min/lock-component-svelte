@@ -1,24 +1,16 @@
 <script lang="ts">
 	import { userInput } from '$lib/stores/UserStore';
+	import { animationLock } from '$lib/stores/AnimationStore';
 
 	export let resetToggle: boolean;
-	let disabled: boolean = false;
 
 	function reset() {
 		userInput.set('');
 		resetToggle = !resetToggle;
 	}
-
-	function disable() {
-		disabled = true;
-	}
-
-	function enable() {
-		disabled = false;
-	}
 </script>
 
-<button class="button" on:click={reset} {disabled}>Reset</button>
+<button class="button" on:click={reset} disabled={$animationLock}>Reset</button>
 
 <style>
 	.button {
