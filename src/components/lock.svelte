@@ -3,18 +3,11 @@
 	import { userInput } from '../lib/stores/UserStore';
 </script>
 
-<div class="container">
-	{#if $secret === $userInput}
-		<h1>Placeholder: Lock is open!</h1>
-	{:else}
-		<h1>Placeholder: Lock is closed!</h1>
-	{/if}
-</div>
-
-<style>
-	.container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-</style>
+<h1>
+	Placeholder:
+	{$secret === $userInput
+		? 'Lock is open!'
+		: $userInput.length >= 4
+		? 'Wrong input!'
+		: 'Lock is closed!'}
+</h1>

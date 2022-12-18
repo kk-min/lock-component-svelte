@@ -25,7 +25,9 @@
 			let padId = $secret[i];
 			animate(padId);
 		}
-		animationLock.set(false);
+		setTimeout(() => {
+			animationLock.set(false);
+		}, 500);
 	}
 
 	onMount(animateSecret);

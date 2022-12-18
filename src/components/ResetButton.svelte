@@ -14,10 +14,16 @@
 
 <style>
 	.button {
+		cursor: pointer;
 		margin: 1rem;
 		font-size: 1.5rem;
-		background-color: white;
+		background-color: lightskyblue;
 		border: 1px solid black;
 		padding: 0.5rem;
+	}
+
+	.button:disabled {
+		cursor: not-allowed;
+		background-color: white;
 	}
 </style>
