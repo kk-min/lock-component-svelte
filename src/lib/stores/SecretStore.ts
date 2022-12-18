@@ -8,7 +8,6 @@ function generateSecret(length: number): string {
 		result += String(numbers[randomIndex]);
 		numbers.splice(randomIndex, 1);
 	}
-	console.log(result);
 	return result;
 }
 
