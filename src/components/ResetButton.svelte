@@ -15,11 +15,12 @@
 <style>
 	.button {
 		cursor: pointer;
-		margin: 1rem;
 		font-size: 1.5rem;
 		background-color: lightskyblue;
 		border: 1px solid black;
-		padding: 0.5rem;
+		padding: 1rem;
+		width: 12%;
+		margin: 1rem;
 	}
 
 	.button:disabled {

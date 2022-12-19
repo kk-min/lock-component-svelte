@@ -9,7 +9,6 @@
 		}
 		pressed = true;
 		userInput.update((prev) => prev + value);
-		console.log($userInput);
 	}
 </script>
 
@@ -19,7 +18,7 @@
 	class:pressed
 	class:locked={$animationLock}
 	on:click={() => onClick(padId)}
-	disabled={$animationLock || pressed}>{padId}</button
+	disabled={$animationLock || pressed}></button
 >
 
 <style>
@@ -28,6 +27,8 @@
 		border: 1px solid black;
 		padding: 10px;
 		font-size: 1.5rem;
+		height: 5rem;
+		width: 5rem;
 		background-color: white;
 	}
 

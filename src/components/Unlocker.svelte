@@ -42,6 +42,7 @@
 <style>
 	.unlocker-container {
 		display: flex;
-		gap: 1rem;
+		gap: 3rem;
+		margin: 2rem;
 	}
 </style>
