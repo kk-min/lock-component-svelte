@@ -16,7 +16,8 @@
 	.button {
 		cursor: pointer;
 		font-size: 1.5rem;
-		background-color: lightskyblue;
+		background-color: var(--color-primary);
+		color: white;
 		border: 1px solid black;
 		padding: 1rem;
 		width: 12%;
@@ -26,5 +27,6 @@
 	.button:disabled {
 		cursor: not-allowed;
 		background-color: white;
+		color: black;
 	}
 </style>
