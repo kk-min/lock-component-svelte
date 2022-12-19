@@ -3,11 +3,20 @@
 	import { userInput } from '../lib/stores/UserStore';
 </script>
 
-<h1>
-	Placeholder:
-	{$secret === $userInput
-		? 'Lock is open!'
+<img
+	class="lock"
+	src={$secret === $userInput
+		? '/images/unlocked.png'
 		: $userInput.length >= 4
-		? 'Wrong input!'
-		: 'Lock is closed!'}
-</h1>
+		? '/images/failed.png'
+		: '/images/locked.png'}
+	alt="lock"
+/>
+
+<style>
+	.lock {
+		width: 20rem;
+		height: auto;
+		margin: 2rem;
+	}
+</style>
