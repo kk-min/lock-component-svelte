@@ -18,8 +18,8 @@
 	class:pressed
 	class:locked={$animationLock}
 	on:click={() => onClick(padId)}
-	disabled={$animationLock || pressed}></button
->
+	disabled={$animationLock || pressed}
+/>
 
 <style>
 	.unlocker {
@@ -34,7 +34,7 @@
 
 	.pressed {
 		cursor: auto;
-		background-color: lightskyblue;
+		background-color: var(--color-primary);
 	}
 
 	.locked {
