@@ -1,5 +1,5 @@
 # Svelte Lock Component
-Copyright © 2022 Min Kabar Kyaw  
+Copyright © 2023 Min Kabar Kyaw  
 
 A simple lock mini puzzle written in Svelte.
 
